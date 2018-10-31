@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+  
+@font-face {
+  font-family: "Enamel Line";
+  src: url("EnamelLine.ttf") format("truetype"); 
+}
+  
+@font-face {
+  font-family: "Benne";
+  src: url("Benne-Regular.otf") format("opentype");
+}
+  
+@font-face {
+  font-family: "Arapey";
+  src: url("arapey-regular.ttf") format("truetype");
+}  
+  
+span, h2, h3 {
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;  
+}
+  
+body {
+  margin: 0;
+  font-size: 28px;
+  font-family: Arial, Helvetica, sans-serif;
+}
+h2 {
+  margin: 25px 0 10px 0;
+  font-size: 54pt;
+  font-family: "Enamel Line";
+  font-variant-ligatures: none;
+  letter-spacing: 2px;
+  }
+  
+h3 {
+  margin: 25px 0 0 0;
+  font-size: 40pt;
+  font-family: Bodoni Regular, Bodoni MT;
+  font-weight: bold;
+  text-align: center;
+}
+  
+#intro {
+  display: block;
+  margin: 0 auto;
+  border: 8px solid white;
+  box-shadow: 0px 1px 4px #cccccc;
+}
+.header {
+  background-color: white;
+  text-align: center;
+  padding: 2px;
+}
+#navbar {
+  overflow: hidden;
+  background-color: white;
+}
+#navbar a {
+  display: inline-block;
+  color: #231f20;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-family: Benne, Bodoni MT;
+  font-size: 18px;
+}
+#buthold {
+  width: 678px;
+  margin: 0 auto;
+}
+#navbar a:hover {color: #999;}
+.content {padding: 16px 0;}
+.sticky {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  box-shadow: 0px 4px 6px -3px #cccccc;
+  z-index: 10;
+}
+.sticky + .content {padding-top: 66px;}
+.stripes {width: 100%;}
+.stripe {
+  width: 100%;
+  height: 2px;
+  margin: 7px 0;
+  background-color: black;
+}
+#botstr {margin-bottom: 70px;}
+.main {padding: 0 24px;}
+  
+#mainimg {
+  overflow: hidden;
+}
+
+#bodytext {
+  width: 756px;
+  margin: 36px auto 72px auto;
+  font-family: Arapey, Bodoni Regular;
+  font-size: 14pt;
+  line-height: 1.4;
+}
+  
+.container {
+  width: 166px;
+  margin: 0 auto 20px auto;
+}
+.circle {
+  height: 4px;
+  width: 4px;
+  background-color: white;
+  border: 2px solid black;
+  border-radius: 50%;
+  display: inline-block;
+  margin: -2px;
+}
+.connector {
+  height: 2px;
+  width: 150px;
+  background-color: black;
+  margin: -6px;
+  display: inline-block;
+  position: relative;
+  top: -7px;
+  z-index: 0;
+}
+</style>
+</head>
+<body>
+
+<div class="header">
+  <h2>LISA & MICHAEL</h2>
+</div>
+
+<div id="navbar">
+<div id="buthold">
+  <a href="javascript:void(0)">HOME</a>
+  <a href="javascript:void(0)">OUR STORY</a>
+  <a href="javascript:void(0)">PHOTOS</a>
+  <a href="javascript:void(0)">EVENTS</a>
+  <a href="javascript:void(0)">TRAVEL</a>
+  <a href="javascript:void(0)">REGISTRY</a>
+</div>
+</div>
+
+<div class="content">
+  <img src="os_small.jpg" width="100%">
+</div>
+
+<script>
+window.onscroll = function() {myFunction()};
+var navbar = document.getElementById("navbar");
+var sticky = navbar.offsetTop;
+//The problem with this methodology: If you refresh the page while scrolled down, this recalculates and changes the scroll position.
+function myFunction() {
+  if (window.pageYOffset >= sticky - 2) {
+    navbar.classList.add("sticky")
+  } else {
+    navbar.classList.remove("sticky");
+  }
+}
+  
+window.onbeforeunload = function(){ window.scrollTo(0,0); }
+</script>
+
+</body>
+</html>
