@@ -111,13 +111,18 @@ h3 {
   top: 50px;
   z-index: -1;
 }
+
+#datediv {
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+  margin: 0;
+}
   
 #date {
   font-family: Cooper Hewitt, Franklin Gothic Demi;
   font-size: 18vh;
   color: #55779d;
-  position: relative;
-  bottom: 0;
   text-align: center;
   margin: 0;
   letter-spacing: 8px;
@@ -171,8 +176,10 @@ h3 {
   
 <img src="home_big.jpg" id="mainimg">
   
+<div id="datediv">
   <p id="date">JUNE 8, 2019</p>
-
+</div>
+  
 <script>
 window.onscroll = function() {myFunction()};
 var navbar = document.getElementById("navbar");
