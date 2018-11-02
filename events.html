@@ -141,7 +141,17 @@ h4 {
   background-color: blue;
   position: absolute;
   display: block;
-  width: 45%;
+  width: 350px;
+}
+  
+#leftcol {
+  left: 0;
+  top: 0;
+}
+  
+#rightcol {
+  right: 0;
+  top: 0;
 }
   
 </style>
@@ -180,7 +190,7 @@ h4 {
   </div>
 
   <div id="bodytext" style="display: block; margin: auto; background-color: yellow">
-    <div class="columner" style="left: 0">
+    <div class="columner" id="leftcol">
       <h4>&#x2776; CEREMONY</h4>
       <p>3:00 PM, Saturday, June 8, 2019<br />
       Saint Clement Catholic Church<br />
@@ -188,7 +198,7 @@ h4 {
       <p><b>Directions</b></p>
     </div>
     
-    <div class="columner" style="right: 0">
+    <div class="columner" id="rightcol">
       <h4>&#x2777; RECEPTION</h4>
       <p>6:00 PM, Saturday, June 8, 2019<br />
       Artifact Events (North Atrium)<br />
